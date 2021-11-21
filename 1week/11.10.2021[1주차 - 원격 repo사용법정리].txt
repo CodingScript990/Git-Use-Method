@@ -1,0 +1,59 @@
+Git 핵심 쏙쏙
+
+[1주차]
+
+✔ remote repo 정리
+
+ 1. remote repo와 local repo를 연결해서 내용을 반영하고 싶을때 local repo가 없고 remote repo에 있는 내용
+  을 가져오고 싶을때 clone이라 한다.
+ 2. remote repo와 local rempo둘 다 있고 두개를 연결하고 싶을때는 local repo가 remote repo를 tracking하도
+  록 설정한다.
+ 
+ - remote repo와 local repo는 왜 따로 있을까?
+
+ 1. 협업할때, 혹은 여러 컴퓨터를 사용한다면 하나의 remote repo에 여러 local repo를 연결시킬 수 있다.
+  하나의 프로젝트를 동시에 작업하는게 가능해진다.
+
+✔ Git 개념지도
+
+ 1. 버전관리
+  - 언제 무엇이 어떻게 바뀌었는지 상태를 정리하는 것
+  - 각 버전의 프로젝트 상태정보를 가지고 있다고 보면된다.
+  - commit은 뭐가 바뀌었는지 project의 상태를 저장해준다.
+
+ 2. Git repo만들기
+  - 내컴퓨터 프로젝트를 만들고
+  - git init을 하고
+  - local repo로 만들고
+  - .git 설정파일을 생성한다!
+
+ 3. remote repo(push)
+  - local repo를 tracking 해서 remote repo로 보낸다.
+
+ 4. remote repo(pull, push)
+  - remote repo에서 pull해서 local repo로 보내고
+  - local repo에서 다시 작업후 push해서 remote repo로 보낸다.
+
+ 5. clone
+  - remote repo에서 github(https)의 주소를 복사후
+  - 내컴퓨터에 폴더를 만들고 remote repo의 주소를 git에 붙여넣기해서
+  - 그래로 clone해온다.
+
+🔥 git 총정리
+
+1. 버전 관리 : 프로젝트 상태가 변경되는 정보를 알고 있다는 것이다. Git은 가장 널리 쓰이는 버전관리 도구
+ 중 하나로 commit을 사용해서 버전이 달라지는 것을 관리한다.
+2. git initialize(초기화) : 컴퓨터에 있는 프로젝트를 Git이 관리하는 프로젝트로 만들 수 있다.
+3. Commit : 현재 프로젝트의 상태를 저장하는 것이라고 생각하면 된다.
+4. add(staging, 스테이징) : commit에 반영할지 안할지는 파일 단위로 선택할 수 있다. commit에 반영할 파일
+ 을 선택하는 것이다.
+5. commit history : commit한 순서대로 list. 즉, 역사~!
+6. git initialize > add(staging) > commit 순!!
+7. repo : Git에서는 repo(repository 리포지토리)라고 부른다. 내 컴퓨터에 저장되어있는 리포지토리를 local
+ repo라고 한다. Github처럼 다른 곳에서 전송할 수 있는 공간에 저장되어있는 것은 remote repo라고 한다.
+8. Tracking(추적) : local repo와 remote repo를 연결한다.
+9. push : local repo의 commit들을 remote repo에 push(반영), 밀어넣다라는 말! remote repo에 없는 즉, 새로
+ 운 commit내역을 모두 remote repo에 한 번에 반영한다.
+10. pull : remote repo의 commit들을 local repo로 반영(pull)! 땡겨온다는 말! local repo에 없는 즉, 새로운
+ commit내역을 모두 local repo에 한 번에 반영한다는 뜻!
+11. clone : remote repo를 내컴퓨터에 가져와서 초기 repo세팅하는 것을 clone(복제)이라 한다!

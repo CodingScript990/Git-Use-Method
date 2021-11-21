@@ -1,0 +1,86 @@
+Git 핵심 쏙쏙
+
+[3주차]
+
+✔ 내작업을 반영하기 - PR
+
+ - PR(Pull Request) : 내작업내역을 바로 merge하지 않고, 참여하고 있는 프로젝트에 내 branch를 merge
+  		      해달라고 request를 먼저 보는 것을 말한다.
+
+		[PR 과정]	
+
+  🔴(특정 commit) →   →   → 🔴(main branch)
+
+    ↘			    ↗ [PR(Merge해도 되나요?)]
+       ● → ● → ● → ● 
+   (cmt01)(cmt02)(cmt03)(cmt04)
+
+
+ - 작업한 내용에 대해 코드 리뷰를 하거나 같이 토론하면서 개선시킬 수 있는 기회가 생기는 것이다.
+  프로젝트 기준에 맞지 않는다면 PR은 reject(거부) 될 수도 있다.
+
+  🔴(특정 commit) →   →  (main branch)
+    
+    ↘
+       ● →  ●  →  → ● (project branch)
+                    ↓
+  
+     [PR 하기전 토론해서 개선사항을 주고 받기]
+      1. 프로젝트에 이런 것을 추가하고 싶어요!
+      2. 추가전에 테스트를해보고 말씀해주세요!
+
+
+ - 리뷰한 후 작업내역을 최종적으로 반영하면 된다. 또 기본적으로 프로젝트 품질을 관리해야하는 회사에
+  서 작업하거나, 여러 사람들이 참여하는 오픈소스에서는 PR후 merge하는 과정을 거치게 된다.
+
+
+  🔴(특정 commit) →       →       →  🔴(main branch)
+    
+    ↘				     ↗
+       ● →  ●  →  → ● →  →  
+                    ↓		    ↪ [merge를 하고 PR에 반영]
+  
+     [PR 하기전 토론해서 개선사항을 주고 받기]
+
+ - 내가 참여하고 싶은 오픈소스 프로젝트가 있다면 코드를 작성해서 내 코드를 반영할 수 있는지 의사를
+  물어본다. 그리고 PR을 해보는 것도 있고 내가 다른 사람 소스를 사용하는 것을 넘어서 프로젝트에 참여를
+  할 수 있다는 것이 큰의미가 부여된다.
+ - 좋아하는 책에 저자로 참여할 수 있는 일이 개발 세계에서 일어나고 있고 Github repo의 contribution
+  페이지에 기여한 사람들 정보를 적어두기도 한다.
+ - 같은 repo안에서 branch를 바로 merge하지 않고 PR한 후에 검토를 받고 merge하는 것을 말한다.
+
+ - PR은 branch를 바로 merge해서 프로젝트에 반영하는 것이 아니라 반영을 request후 merge할지 말지가
+  결정된다.
+
+       🟥	🔴  →  🔴  →  →  🔴
+ (remote repo)            ↘    ↗ [PR(merge)]
+                             🔴(project branch)
+
+				    🔽 [Pull]
+					
+       💻	🔴  →  🔴  →  →  🔴 (Merge branch 'branch name' into main)
+  (local repo)            ↘
+                            🔴(project branch)
+
+ - branch 삭제하는 이유?
+  1. PR이 완료된 후에 local repo의 branch를 삭제하는 것은 이전에도 branch는 작업을 다하고 main 빼고
+  는 해줘야지만 충돌을 방지 할 수 있다. 또한 필요없는 branch를 남겨두는 것을 좋지 않다.
+  2. PR은 리뷰하는 과정을 통상적으로 포함한다. PR후에도 추가적으로 commit을 하는 경우도 있다.
+  3. 리뷰에서 추가 수정을 요청받거나
+  4. PR을 그대로 merge한다고 했을 때 merge conflict가 나는 것을 미리 고치는 것
+  5. 수정제안을 받았을때, local repo의 'branch'에서 commit후, remote repo의 'branch'에 push하는 것
+  이 통상적이다.
+
+ 		   [PR전 branch삭제를 왜 마지막 검토후 하는지?]
+      🟥
+(remote repo)	→                 →               →  🔴(Merge branch 'branch name' into main)
+	
+     💻	 		     ↗ [PR요청!](1)	     ↗
+(local repo)	→         🔴           →        🔴[최종적으로 PR을 함](2)      
+			   ↓
+                    [추가사항 발생]
+		 [최종적으로 작업발생!]    
+
+ ※ 즉 (1)번처럼 PR을 요청하였으나 추가사항이 생겨 branch를 삭제했다가 다시 또 branch를 생성하는 것
+  은 시간낭비이며 좋지 않다. (2)번처럼 마지막에 최종 검토후에 PR을 하고 그리고 branch를 삭제해주는
+  것이 옳다.

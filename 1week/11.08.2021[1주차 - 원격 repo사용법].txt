@@ -1,0 +1,61 @@
+Git 핵심 쏙쏙
+
+[1주차]
+
+✔ 원격 repo과 로컬 repo란?
+
+- 내컴퓨터에 저장된 Git프로젝트는 오직 이 컴퓨터에서 나만 볼 수 있는 것이 아닌, 다른사람과 공유하고
+ 다른 사람도 볼 수 있고, Git으로 협업도 할 수 있는 것을 말한다.
+- Git으로 관리되는 프로젝트를 Git에서는 repo(리포, repository:리포지토리)라고 부른다.
+- 내컴퓨터에 저장되어있는 repository를 local repo라고 한다. Github처럼 다른 곳에서 접속할 수 있는
+ 공간에 저장되있는 것을 remote repo(원격 repository)라고 한다.
+- Github는 remote repo가 저장되어있고 + 개발자 커뮤니티 기능을 하는 서비스이다. 
+
+✔ remote repo와 local repo를 같이 사용한다는 것은?
+
+- 먼저 one drive, google drive와 같은 cloud service를 사용하는 걸 생각해본다면, cloud에 있는 폴더를
+ 내컴퓨터에 있는 폴더를 연결해서 동기화해두면 내컴퓨터의 내용이 자동으로 cloud 폴더와 똑같아지는 것을
+ 말한다.
+- Git도 cloud service로 두 군데의 내용을 동기화한 것처럼 remote repo 와 local repo를 연결시켜서 내용을
+ 반영시킬 수 있다. local repo가 remote repo를 연결하는 것을 추적(Tracking, /branch tracking)이라고 
+ 한다.
+- local repo만이 내가 어떤 remote repo와 연결되어있는지를 알고 있고, remote repo는 내가 어떤 local 
+ repo와 연결되어있는지와 그리고 Info(정보)를 가지고 있지 않다. 언제나 local repo를 기준으로 동작을 
+ 이해해주면 된다.
+- cloud service와 다르게 작업내역 즉, commit을 자동으로 반영하지는 않는다! 내가 원하대로 어디 commit
+ 까지만 반영할지를 수동으로 설정할 수 있게 해서 프로젝트를 더 잘 관리하기 위해서이다.
+- 협업할 때 특히 commit을 원하는 만큼 반영하는 것이 필요하다. 만약 commit이 자동으로 반영된다면 같이
+ 협업할 때 어떤 것을 수정했고, 어떤 부분을 삭제했는지 알 수 없기 때문이다.
+- 그래서 꼭 수동으로 commit을 하는 이유이다!
+
+[Git 개념!(용어정리)]
+
+🔥 local repo의 commit들을 remote repo에 반영하는 것을 push라고 한다. commit들을 밀어넣는 것을 말한다.
+
+🔥 remote repo의 commit들을 local repo에 반영하는 것을 pull이라고 한다. commit들을 땡겨온다!
+
+🔥 local repo를 기준으로 생각하면 나의 내용을 보내주니깐 push! 나의 내용을 땡겨오니깐 pull 이렇게 
+ 기억하면 된다!
+
+🔥 remote repo를 내 컴퓨터에서도 사용할 수 있도록 가져올 수 있다. 일종의 초기 다운로드라고 생각하면
+ 된다. 이것을 clone(복제)라고 한다.
+
+[🔥Tip🔥]
+
+1. Git project 작업을 할때 pull >> local repo commit >> push 순서로 하면된다.
+2. remote repo 와 local repo에서 같은 파일을 수정하면 git이 같은 파일을 수정했는데 내가 어떤 파일을 최종
+ 으로 할지를 확인메시지를 준다. 이런것이 바로 confilict(충돌)이라고 한다.
+3. 총돌을 피하기 위해서는 같은 파일을 동시에 수정하지 않고 두 repo의 상태를 똑같이 맞춰준 후에 변경작업
+ 을 해주는게 좋다.
+ - remote repo와 local repo의 상태를 똑같이 맞춰주고, local repo에 remote repo작업내역 가져오기(pull)
+ - local repo의 작업 내용을 저장하고(commit)
+ - remote repo에 local repo내용을 반영(push)
+4. remote repo에 변경사항이 생길때 먼저 pull하고 local repo에서 작업하면 많은 경우 conflict를 피할수 있
+ 다.
+
+✔ clone remote repo를 내컴퓨터로 가져오기!
+
+ - A컴퓨터에서 작업한 걸 github에 올리고 B컴퓨터에서 내용을 보고 싶을때
+ - 다른사람의 repo를 나도 다운받아보고 싶을때!
+ - 이때사용하는 것을 clone이라한다. 복제라는 뜻으로 repo를 내컴퓨터에 복제해온다는 소리이다.
+ - url을 통해서 remote repo에 접근이 가능하다. repo ulr을 사용해 repo를 clone 해올 수 있다.

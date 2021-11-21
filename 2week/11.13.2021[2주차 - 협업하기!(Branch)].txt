@@ -1,0 +1,45 @@
+Git 핵심 쏙쏙
+
+[2주차]
+
+✔ Branch
+
+ - 나뭇가지 뻗어나오듯 기능에 맞게 나누어 작업을 할 수 있다.
+ - 만약 각자 다른 작업중일때 commit history를 나중에 확인 하였더니 작업내역이 섞여 있어서 각 작업이
+  어떻게 진행되는지 보기가 어려울 수 있다.
+ - 게다가 내 작업만 열심히 commit하는게 아니라 다른 부분도 신경을 써주거나 각자 같은 파일을 작업하면서 
+  충돌이 나서 더 이상 작업이 힘들수가 있다. 서로 작업한 commit내역을 내 local repo에도 틈틈이 반영해줘야
+  한다!
+ - commit을 main이라는 이름을 가진 branch라는 것을 알고 있는가?
+ - 프로젝트마다 사실 설정되어 있다. 기본 branch는 main이기 때문에 바꿀 필요가 없다.
+ - 작업 목적에 따라 branch를 만들어서 관련된 작업만 하고, 나중에 하나로 합치면 된다!
+ - 만약 commit되지 않은 작업 내역이 있다면 commit부터 해준다. 그 이유는 충돌을 방지하기 위함이다!
+
+✔ Branch 삭제
+
+ - Branch를 삭제한다는 것은 그동안 Branch에 했던 작업 내역을 즉, commit이 모두 사라진다는 의미이다.
+ - Branch를 del하면 Basic branch인 main branch로 checkout 즉 작업 branch로 change 된다. 작업 branch가 
+  변경되면 파일의 상태도 당연히 해당 branch의 마지막 commit으로 상태가 변경된다.
+ 
+✔ Branch 정리
+
+ - issue는 내가 작업할 것, 기능 추가, 버그 리포트 등 여러 방식으로 사용이 가능!
+ - 협업을 하기 위해 issue를 만들어 누가 작업할지 정하고, 브랜치를 만들어 작업할 공간을 나눈다.
+ - branch는 특정 commit에서 갈라져나와 작업을 할 수 있다. 우리는 기능별로 이름을 만들어주어 branch 작업을
+  해주면 된다.
+ - 작업할 브랜치로 바꾸는 것을 checkout이라 한다. checkout된 branch에서만 commit이 반영된다!
+ - branch를 삭제하고 싶다면? 당연하게도 다른 branch로 이동후 삭제를 해주면 된다!! 그럼 해당 branch에서 
+  작업한 것들은 모두 사라진다. :)
+
+			 💻[Branch 정리]💻
+
+
+	● → 			       ● → 		●
+   (main branch)    		  (1번 branch1)     (2번 branch2)
+	↓ ↘			     ↗[merge1]	      [merge2]
+	     ● →	● →	  ●			↑
+	  (branch1)  (branch1) (branch1)
+	↓						↑
+	
+	● →		● →		● →	        ●
+     (branch2)	     (branch2)	     (branch2)      (branch2)

@@ -1,0 +1,19 @@
+Git 핵심 쏙쏙
+
+[3주차]
+
+✔ commit 고치기 - amend
+
+ - commit 실수 하면 기본적으로 나만 작업하는 특정 branch 하나에만 적용해야한다! 그렇지 않으면 작업
+  하던 사람들의 commit까지 날라간다! 주의!!
+ - 작업중 commit 메시지에 오타 났거나 파일을 add(staging)할때 최신의 commit을 수정하는 것을 amend
+  (어맨드, 고치기)라고 한다. amend로는 가장 최신의 commit만 고칠 수 있다는 것을 알아두기!
+
+		[amend]
+ → 🔴  		    → 		    🔴
+  (cmt01)			  (cmt02)
+    ↑		   		    ↑
+[amend로 못고침!]    [여기에서 amend로 수정가능!]
+   
+ - push후에도 push한 commit을 되돌릴 수 있다. 강제로 commit을 덮어씌우는 것과 같습니다! force push
+  (강제 푸시)라고 한다.

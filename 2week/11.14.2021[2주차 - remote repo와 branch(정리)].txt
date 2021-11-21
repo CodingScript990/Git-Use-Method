@@ -1,0 +1,35 @@
+Git 핵심 쏙쏙
+
+[2주차]
+
+✔ Remote repo 와 Branch [정리]
+
+ - tracking한다는 것은 local repo와 remote repo의 특정 branch를 연결해주는 것이다.
+ - push와 pull은 기본적으로 tracking되고 있는 branch를 기준으로 commit내역을 반영한다.
+ 
+🟥 쉬어가기 🟥
+
+ - No matter the circumstances you can always improve.
+ - You can always start improving with yourself.
+ - Yo can always start improving today.
+ - Written by Kent Beck and Cynthia Andres.
+
+✔ Tip
+
+ - 내용이 쉽다? 그럼 난이도를 높여보기!
+ - 추가자료 읽어 보고 생각/실제로 해보기!
+ - 나만의 실험 고안해보기
+ - 에러를 일부러 내보고 해결하는 거 구글링해보기
+ - 그 과정에서 내가 깨달은 것 TIL에 적어보기
+
+ - 너무 어렵다, 집에 있어도 집에 가고싶다! -> 난이도 낮추기
+ - 영상 보면서 천천히 시간 들여서 따라해보기
+ - 그다음에 다시 시도해보기
+ - 내가 어려워 했던 내용이 무엇인지 정리해보기
+ - 그 과정에서 내가 깨달은 것 TIL에 적어보기
+ 
+ ※ 항상 뭐든지 겪어보고 익숙해질때까지 해보는 것은 빠른 성장의 지름길이다. 성공도 실패를 경험해보고
+  실패를 토대로 한발짝 더 나아가는 것이다. 쉽게 성공하는 것은 인간이 신이 아닌이상 경험할 수 없다.
+  그러니 실패와 도전을 많이하고 주변을 살피지 않고 일단 나를 위해서 경험을 많이 쌓아 좋은 개발자가
+  되길 바란다. (feat : Me)
+

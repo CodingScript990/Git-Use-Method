@@ -1,0 +1,35 @@
+Git 핵심 쏙쏙
+
+[3주차]
+
+✔ 배운것들 정리
+
+ - issue : 내가 할 작업, 기능 추가, 버그 리포트등 여러 방식으로 사용할 수 있다.
+ - branch : 협업을 하기 위해 issue를 만들어 누가 작업할지를 정해서 작업 공간을 나눌때를 말한다. 
+  특정 commit에서 갈라져나와 작업이 가능하고, 기능별로 이름을 만들어준다.
+ - checkout : 작업할 branch로 바꾸는 것을 말한다. checkout된 branch에만 commit이 반영된다.
+ - merge : branch의 작업내역 commit들을 다른 branch로 반영하는 것을 말하며, 개발 할때는 기준이 되는
+  기본 branch를 정해놓고 해당 branch에 내용을 merge한다.
+ - merge conflict : merge하는 과정에서 같은 파일이 동일한 부분이 수정된 게 발견되면 발생한다. Git이
+  똑똑해서 충돌을 파악할 수 있게 파일 내용을 고쳐서 충돌 내역을 보여준다. 우린 수정해서 commit후 mer
+  ge해주면 끝!
+ - tracking : local repo와 remote repo의 특정 branch를 연결해준다는 것을 말한다. 그리고 push와 pull은
+  기본적으로 tracking되고 있는 branch를 기준으로 commit내역을 반영한다는 것이다.
+
+✔ 3주차 배울 Git
+
+ - commit관리 : 내가 작업중인 것을 반영해달라고 요청하는 PR과 commit을 되돌리고 임시로 저장하는 방법
+  을 해본다.
+  -> PR, commit 되돌리기 - amend, revert, reset, 작업내역 임시저장 - stash
+
+ - Git프로젝트 관리(협업매너) : 협업하기 위해서 먼저 의사소통이 잘되야하는 것처럼 좋은 작업내역을 
+  남기기위해 commit단위 관리, 메시지 작성과 다른 사람에게 프로젝트 소개하는 방법을 알아보기!
+  -> commit 메시지 컨벤션, gitignore, README 
+ 
+ - Open source로 정보 탐색하기! : 우리가 맛집 탐방을 하듯이 개발자도 좋은 코드를 많이 보고 참여해보고
+  싶어한다.
+  -> github exprore, open source
+
+ - Github으로 개발자인 나를 표현하기 - 포트폴리오 : 개발자들은 명함과 이력서에 왜 github이 있는지
+  아는가? 말그대로 내가 얼만큼 알고 작업했고 결과물이 있는지를 보여주기 위함이라고 생각하면된다.
+  -> github profile, repo 소개, github blog

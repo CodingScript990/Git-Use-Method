@@ -1,0 +1,19 @@
+Git 핵심 쏙쏙
+
+[2주차]
+
+✔ 총정리
+
+ - Issue : 내가 할 작업, 기능 추가, Bug 리포트 등 여러 방식으로 사용할 수 있다.
+ - 협업을 하기 위해 issue를 만들어 누가 작업할지 정하고, Branch를 만들어 작업할 공간을 나눈다.
+ - Branch : 특정 commit에서 갈라져나와 작업 할 수 있다. 기능별로 이름을 만들어주어 branch작업을 한다
+ - checkout : 작업할 Branch로 바꾸는 것을 말한다. checkout된 branch만 commit이 반영된다.
+ - Merge : branch의 작업내역 commit들을 다른 branch로 반영되는 것을 말한다. 개발할때는 기준이 되는
+  기본 branch를 정해놓고 해당 branch에 내용을 nerge한다.
+ - Branch명은 규칙을 가지고 잘 이름 지으면 프로젝트 관리가 easy해진다. 작업이 완료되면 작업한 branch
+  는 보통 삭제해준다. 나중에 branch 설정이 꼬이는 것을 방지할 수 있다.
+ - 각 작업 branch에서 작업할 때는 다른 branch의 영향을 받지 않고 독립적으로 작업할 수 있다. 
+ - Merge conflict : Merge하는 과정에서 같은 파일이 동일한 부분이 수정된게 발견될때 발생한다.
+ - Git은 다행이도 똑똑해서 충돌을 파악하고 파일내용을 고쳐서 충돌내역을 보여준다. :) 
+ - Tracking : local repo와 remote repo의 특정 branch를 연결해주는 것이다.
+ - push와 pull은 기본적으로 tracking되고 있는 branch를 기준으로 commit내역을 반영한다.

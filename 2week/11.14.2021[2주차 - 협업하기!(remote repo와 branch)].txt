@@ -1,0 +1,52 @@
+Git 핵심 쏙쏙
+
+[2주차]
+
+✔ remote repo와 branch[개념]
+
+ - remote repo는 local repo와 연결이 되어있습니다. 이 연결은 local repo의 branch와 remote repo의
+  branch가 연결되어 있다. 그러나 따로 설정하지 않고 기본적으로 local repo의 branch명과 같게 remote
+  repo의 branch명이 생성되어 tracking된다.
+ - commit history에 보여지는 origin/main이름표는 remote repo의 main branch라는 뜻이다. remote repo를
+  연결할때 origin이라고 적어주었기 때문에 앞에 origin이 붙는 것이다.
+
+ - 연결의 개념
+
+      🟥             ●   →    ●   →    ●
+ (Remote repo)    (commit1)  (commit2)  (commit3) [origin/main]
+
+						       ↑(tracking)
+      💻		     ●   →    ●   →    ●        [main]
+ (Local repo)	  (commit1)  (commit2)  (commit3)
+
+ - pull과 push는 결국 특정 branch(tracking branch)에 있는 commit을 여기와 연결되어있는 branch에 가져
+  오는 것이다!
+
+ 				🟥
+	           	   (Remote repo)
+
+  (Tracking하는 branch에 push) ↑ ↓(Tracking하는 branch에서 pull)
+				💻
+			   (Local repo)
+
+ - remote repo branch와 local repo branch 연결 확인
+
+      🟥		    ●   →    ●		[origin/main]
+ (Remote repo)   (commit1)  (commit2)		     ↑
+						     
+					  (Tracking) ↑
+      💻		    ● → ● → ● → ● → ●     [main]
+ (Local repo) 	  (com1)(com2)(com3)(com4)(com5)
+
+ ※ Local repo에서 com3, com4, com5를 tracking하는 branch에 push해주면 origin/main에 업로드가 된다!
+
+ - local repo에서 remote repo에 origin/main이 아닌 추가로 origin/다른 branch를 생성해줘서 작업에 
+  혼란을 주지 않고 따로 작업을 할때 분리를 해주면 나중에 볼때도 구분하기 쉽다.
+
+      🟥		   ●   →    origin/feature/jjim
+ (Remote repo)
+				   ↑ (Tracking)
+			       ●  
+ 			    ↗		
+      💻		   ● → ●
+ (Local repo)    (merge branch 'feature/jjim')
